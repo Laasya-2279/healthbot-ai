@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Logout | HealthBot</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding-top: 80px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #00BFA6;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #444;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00F0FF;
+            color: white;
+            border: none;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #00c9d9;
+        }
+    </style>
+</head>
+<body>
+<h1>👋 You've been logged out!</h1>
+<p>Thank you for using HealthBot. Come back soon, okay?</p>
+<a href="https://dev-xix3limqfxmjd48h.us.auth0.com/v2/logout?client_id=AyoKejhumLodcPraPfOUZec3ITqd5h5K&returnTo=http://localhost:8082/login">
+    Return to Home
+</a>
+</body>
+</html>

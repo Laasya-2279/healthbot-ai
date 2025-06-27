@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: healthbot-ai
+    env: java
+    buildCommand: mvn clean package
+    startCommand: java -jar target/healthbot-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: GEMINI_API_KEY
+        value: YOUR_GEMINI_KEY_HERE

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HealthBot 💙</title>
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row h-100">
+        <!-- Sidebar -->
+        <div class="col-3 sidebar">
+            <h5>💬 Your Chats</h5>
+            <button class="btn btn-success w-100 mb-3" onclick="startNewChat()">+ New Chat</button>
+            <ul id="sessionList" class="list-unstyled"></ul>
+        </div>
+
+        <!-- Main Chat -->
+        <div class="col-9 chat-area">
+            <div class="chat-header">
+                <h5>HealthBot 🤖</h5>
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+                </form>
+            </div>
+
+            <div class="chat-messages" id="messages"></div>
+            <div id="typingIndicator" class="typing-indicator" style="display: none;">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Describe your symptoms..." />
+                <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/chat.js"></script>
+</body>
+</html>
